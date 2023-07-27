@@ -17,34 +17,48 @@ struct Onboarding: View {
     @State private var firstName: String = ""
     @State private var lastName: String = ""
     @State private var email: String = ""
+    @State private var isLoggedIn: Bool = false
    
     var body: some View {
-        VStack{
-            
-            TextField("First Name",
-                    text: $firstName)
-            
-            TextField("Last Name", text: $lastName)
-            
-            TextField("Email", text: $email)
-            
-            Button(action:{
-                if firstName != "" && lastName != "" && email != ""{
-                    UserDefaults.standard.set(firstName, forKey: kFirst)
-                    UserDefaults.standard.set(lastName, forKey: kLast)
-                    UserDefaults.standard.set(email, forKey: kEmail)
+     
+        NavigationView{
+            VStack{
+                
+                NavigationLink(destination:Home(), isActive: $isLoggedIn){
+                    EmptyView()
                 }
                 
-            }) {
-                Text("Register")
+
+                
+                TextField("First Name",
+                          text: $firstName)
+                
+                TextField("Last Name", text: $lastName)
+                
+                TextField("Email", text: $email)
+                
+                Button(action:{
+                    if firstName != "" && lastName != "" && email != ""{
+                        UserDefaults.standard.set(firstName, forKey: kFirst)
+                        UserDefaults.standard.set(lastName, forKey: kLast)
+                        UserDefaults.standard.set(email, forKey: kEmail)
+                        isLoggedIn = true
+                    }
+                    
+                }) {
+                    Text("Register")
+                }
+                
             }
             
         }
+        
     }
 }
 
 struct Onboarding_Previews: PreviewProvider {
     static var previews: some View {
+        
         Onboarding()
     }
 }
