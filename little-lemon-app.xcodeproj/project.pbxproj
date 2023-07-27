@@ -8,12 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		A609747A2A72B7C800595E69 /* little_lemon_appApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A60974792A72B7C800595E69 /* little_lemon_appApp.swift */; };
-		A609747C2A72B7C800595E69 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A609747B2A72B7C800595E69 /* ContentView.swift */; };
 		A609747E2A72B7CA00595E69 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A609747D2A72B7CA00595E69 /* Assets.xcassets */; };
 		A60974812A72B7CA00595E69 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A60974802A72B7CA00595E69 /* Preview Assets.xcassets */; };
 		A609748B2A72B7CB00595E69 /* little_lemon_appTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A609748A2A72B7CB00595E69 /* little_lemon_appTests.swift */; };
 		A60974952A72B7CB00595E69 /* little_lemon_appUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A60974942A72B7CB00595E69 /* little_lemon_appUITests.swift */; };
 		A60974972A72B7CB00595E69 /* little_lemon_appUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A60974962A72B7CB00595E69 /* little_lemon_appUITestsLaunchTests.swift */; };
+		A60974A42A72C6EF00595E69 /* Onboarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = A60974A32A72C6EF00595E69 /* Onboarding.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +36,6 @@
 /* Begin PBXFileReference section */
 		A60974762A72B7C800595E69 /* little-lemon-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "little-lemon-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A60974792A72B7C800595E69 /* little_lemon_appApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = little_lemon_appApp.swift; sourceTree = "<group>"; };
-		A609747B2A72B7C800595E69 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		A609747D2A72B7CA00595E69 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A60974802A72B7CA00595E69 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		A60974862A72B7CB00595E69 /* little-lemon-appTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "little-lemon-appTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -44,6 +43,7 @@
 		A60974902A72B7CB00595E69 /* little-lemon-appUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "little-lemon-appUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A60974942A72B7CB00595E69 /* little_lemon_appUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = little_lemon_appUITests.swift; sourceTree = "<group>"; };
 		A60974962A72B7CB00595E69 /* little_lemon_appUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = little_lemon_appUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		A60974A32A72C6EF00595E69 /* Onboarding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,7 +95,7 @@
 			isa = PBXGroup;
 			children = (
 				A60974792A72B7C800595E69 /* little_lemon_appApp.swift */,
-				A609747B2A72B7C800595E69 /* ContentView.swift */,
+				A60974A32A72C6EF00595E69 /* Onboarding.swift */,
 				A609747D2A72B7CA00595E69 /* Assets.xcassets */,
 				A609747F2A72B7CA00595E69 /* Preview Content */,
 			);
@@ -257,7 +257,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A609747C2A72B7C800595E69 /* ContentView.swift in Sources */,
+				A60974A42A72C6EF00595E69 /* Onboarding.swift in Sources */,
 				A609747A2A72B7C800595E69 /* little_lemon_appApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
