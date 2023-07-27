@@ -22,6 +22,11 @@ struct Menu: View {
     }
 }
 
+func getMenuData(){
+    var URL: String
+    
+}
+
 struct Menu_Previews: PreviewProvider {
     static var previews: some View {
         Menu()
