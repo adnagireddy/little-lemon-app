@@ -8,32 +8,39 @@
 import Foundation
 import CoreData
 
-struct menuList: Decodable{
+struct MenuList: Decodable{
     let menu : [menuItem]
     
+    enum myKeys: String, CodingKey{
+        case menu = "menu"
+    }
     
-    func getMenuData(viewContext: NSManagedObjectContext){
+    static func getMenuData(viewContext: NSManagedObjectContext){
         PersistenceController.shared.clear()
 
-        var url = URL(string: "https://raw.githubusercontent.com/Meta-Mobile-Developer-PC/Working-With-Data-API/main/menu.json")
+        let url = URL(string: "https://raw.githubusercontent.com/Meta-Mobile-Developer-PC/Working-With-Data-API/main/menu.json")
 
         
-        var urlRequest = URLRequest(url: url!)
+        let urlRequest = URLRequest(url: url!)
         
-        var urlSession = URLSession.shared
+        let urlSession = URLSession.shared
         
-        var dataTask = urlSession.dataTask(with: urlRequest){data, response, error in
+        let dataTask = urlSession.dataTask(with: urlRequest){data, response, error in
             if let data = data {
-                var JSONDecoder = JSONDecoder()
-                for dish in menu {
-                    let newDish = Dish(context: viewContext)
-                    newDish.title = dish.title
-                    newDish.price = dish.price
-                    newDish.image = dish.image
+                let JSONDecoder = JSONDecoder()
+                if let entireMenu = try? JSONDecoder.decode(MenuList.self, from: data) {
+                    for dish in entireMenu.menu {
+                        let newDish = Dish(context: viewContext)
+                        newDish.title = dish.title
+                        newDish.price = dish.price
+                        newDish.image = dish.image
+                    }
+                    try? viewContext.save()
+                } else {
+                    print("fail entireMenu")
                 }
-                try? viewContext.save()
-                
-                var menu = try? JSONDecoder.decode(menuList.self, from: data)
+            } else {
+                print("fail data")
             }
         }
         

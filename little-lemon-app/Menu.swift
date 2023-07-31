@@ -7,7 +7,6 @@
 
 import SwiftUI
 
-
 struct Menu: View {
     
     
@@ -22,16 +21,16 @@ struct Menu: View {
 
     @State var isKeyboardVisible = false
     @Environment(\.managedObjectContext) private var viewContext
-
     
     var body: some View {
-        let dummyMenuList = menuList(menu: <#[menuItem]#>)
-        
+                
         VStack{
             
             Text("Little Lemon")
             Text("Allentown, PA")
             Text("We are a family-owned restaurant, determined to bring the flavors of India to your local eatery")
+            
+            TextField("Search Menu", text: $searchText)
 
             FetchedObjects(predicate: buildPredicate(), sortDescriptors: buildSortDescriptors()) { (dishes: [Dish]) in
                 List{
@@ -50,11 +49,9 @@ struct Menu: View {
                 }
             }
             
-        }.onAppear{dummyMenuList.getMenuData(viewContext: viewContext)}
+        }.onAppear{MenuList.getMenuData(viewContext: viewContext)}
         
     }
-    
-    
     
     
     func buildSortDescriptors() -> [NSSortDescriptor] {
@@ -77,25 +74,9 @@ struct Menu: View {
 }
 
 
-
 struct Menu_Previews: PreviewProvider {
     static var previews: some View {
-        Menu()
+        Menu().environment(\.managedObjectContext, PersistenceController.shared.container.viewContext)
     }
 }
 
-
-/*
- 
- FetchedObjects(predicate: buildPredicate(),
-                sortDescriptors: buildSortDescriptors()) {
-     (dishes: [Dish]) in
-     List(dishes) { dish in
-         NavigationLink(destination: DetailItem(dish: dish)) {
-             FoodItem(dish: dish)
-         }
-     }
-     .listStyle(.plain)
- }
- 
- */
