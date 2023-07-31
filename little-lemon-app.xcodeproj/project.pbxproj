@@ -21,6 +21,7 @@
 		A60974B22A73152C00595E69 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = A60974B02A73152C00595E69 /* Persistence.swift */; };
 		A60974B42A73155000595E69 /* MenuList.swift in Sources */ = {isa = PBXBuildFile; fileRef = A60974B32A73155000595E69 /* MenuList.swift */; };
 		A60974B62A73155C00595E69 /* MenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A60974B52A73155C00595E69 /* MenuItem.swift */; };
+		A60974B92A7587FA00595E69 /* ExampleDatabase.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A60974B72A7587FA00595E69 /* ExampleDatabase.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +59,7 @@
 		A60974B02A73152C00595E69 /* Persistence.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Persistence.swift; path = ../../../Downloads/KrOCQU2CTpmu1REIfryAvg_ae0cd909bf5e4e7db7525f835ddd50e1_CoreDataSupport/Persistence.swift; sourceTree = "<group>"; };
 		A60974B32A73155000595E69 /* MenuList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuList.swift; sourceTree = "<group>"; };
 		A60974B52A73155C00595E69 /* MenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItem.swift; sourceTree = "<group>"; };
+		A60974B82A7587FA00595E69 /* ExampleDatabase.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ExampleDatabase.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +116,7 @@
 				A609747F2A72B7CA00595E69 /* Preview Content */,
 				A60974A72A72EB6000595E69 /* Home.swift */,
 				A60974A92A72EBBE00595E69 /* Menu.swift */,
+				A60974B72A7587FA00595E69 /* ExampleDatabase.xcdatamodeld */,
 				A60974AB2A7301D300595E69 /* UserProfile.swift */,
 				A60974AF2A73152C00595E69 /* FetchedObjects.swift */,
 				A60974B02A73152C00595E69 /* Persistence.swift */,
@@ -283,6 +286,7 @@
 				A60974B42A73155000595E69 /* MenuList.swift in Sources */,
 				A60974B12A73152C00595E69 /* FetchedObjects.swift in Sources */,
 				A60974B22A73152C00595E69 /* Persistence.swift in Sources */,
+				A60974B92A7587FA00595E69 /* ExampleDatabase.xcdatamodeld in Sources */,
 				A60974AC2A7301D300595E69 /* UserProfile.swift in Sources */,
 				A60974B62A73155C00595E69 /* MenuItem.swift in Sources */,
 				A60974AA2A72EBBE00595E69 /* Menu.swift in Sources */,
@@ -605,6 +609,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		A60974B72A7587FA00595E69 /* ExampleDatabase.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				A60974B82A7587FA00595E69 /* ExampleDatabase.xcdatamodel */,
+			);
+			currentVersion = A60974B82A7587FA00595E69 /* ExampleDatabase.xcdatamodel */;
+			path = ExampleDatabase.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = A609746E2A72B7C800595E69 /* Project object */;
 }
